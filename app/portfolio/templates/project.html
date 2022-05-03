@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Projet</h1>
+
+<div class="container-fluid">
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="">{{project.titre}}</a></h5>
+                   <h6 class="card-subtitle mb-2 text-muted">{{project.langage}}</h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
