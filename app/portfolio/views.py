@@ -11,7 +11,7 @@ def projects(request):
     result_project = {'projects' : projects}
     return render(request, 'projects.html',result_project)
 
-def project(request,title):
-    project_name = Projects.get(titre=title)
-    context = {'project_name': project_name}
+def project(request,id):
+    project_id = Projects.objects.get(id=id)
+    context = {'project_id': project_id }
     return render(request, 'project.html',context)

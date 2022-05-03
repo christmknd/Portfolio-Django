@@ -2,15 +2,17 @@
 
 {% block content %}
 
-<h1>Projet</h1>
-
 <div class="container-fluid">
 
     <div class="container">
         <div class="card">
+            <div class="card-header">
+                <h5 class="card-title"> <a href="">{{project_id.titre}}</a></h5>
+            </div>
             <div class="card-body">
-                <h5 class="card-title"> <a href="">{{project.titre}}</a></h5>
-                   <h6 class="card-subtitle mb-2 text-muted">{{project.langage}}</h6>
+                   <h6 class="card-subtitle mb-2 text-muted">{{project_id.langage}}</h6>
+                   <p class="card-text">{{project_id.description}}</p> <br>
+                   <a href="{{project_id.lien_github}}" class="card-link"> <strong>Github</strong></a> <br>
             </div>
         </div>
     </div>
