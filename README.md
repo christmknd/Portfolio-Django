@@ -1,11 +1,17 @@
 # Portfolio-Django
 
-## Installation / Mise en place
+## Installation / Mise en place du projet
 
 Lancer le serveur 
 
 ```bash
 python3 manage.py runserver
+```
+
+creer une application 
+
+```bash
+python3 manage.py startapp {nom application}
 ```
 
 Appliquer/ créer les migrations
