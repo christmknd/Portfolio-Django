@@ -1,0 +1,29 @@
+/*bannière*/
+
+.banner {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ban {
+    width: 100%;
+    max-width: 100%;
+    position : relative;
+}
+
+.ban img{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.inner-banner {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+
+.inner-banner h1 {
+    text-shadow: 1px 1px 5px #e6e6e6;
+}
