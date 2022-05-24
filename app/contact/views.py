@@ -2,6 +2,7 @@ from django.shortcuts import render
 from . models import Contact
 from . forms import ContactForm
 from django.http import HttpResponseRedirect , HttpResponse
+from django.core.mail import send_mail
 
 def contact(request):
     form_class = ContactForm
@@ -14,13 +15,24 @@ def contact(request):
             email = request.POST.get('email')
             subject = request.POST.get('subject')
 
-            #envoie des données dans le base de donées admin 
+            data = {
+                'name': name,
+                'email': email,
+                'subject' : subject
+            }
+
+            subject = ''' Nouveau Messsage {}
+                          De {}
+                      '''.format(data['subject'], data['email'])
+            send_mail(data['subject'],subject, '', ['christmdev@gmail'])
+
+            #enregistrement des données dans le base de donées admin 
             contact = Contact
             contact.name = name
             contact.email= email
             contact.subject = subject
             contact.save
-            return HttpResponse('<p>sucess</p>')
+            return HttpResponseRedirect('/contact/sucess')
     return render(request,'contact.html', {'form' : form})
 
 def sucess(request): 
